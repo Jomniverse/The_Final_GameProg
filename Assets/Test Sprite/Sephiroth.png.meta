@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sephiroth_0: -8478658009978014984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
