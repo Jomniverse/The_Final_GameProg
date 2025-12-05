@@ -21,11 +21,7 @@ public class UI_MainMenuManager : MonoBehaviour
         loadingScreen.SetActive(true);
         StartCoroutine(LoadLevelAsync(leveltoLoad));
     }
-    public void ShowSoundPanel()
-    {
-        soundSettings.SetActive(true);
-    }
-
+    
     IEnumerator LoadLevelAsync(string leveltoLoad)
     {
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(leveltoLoad);
@@ -43,10 +39,7 @@ public class UI_MainMenuManager : MonoBehaviour
         loadOperation.allowSceneActivation = true;
     }
 
-    public void Back()
-    {
-        soundSettings.SetActive(false);
-    }
+   
 
      public void QuitGame()
     {
