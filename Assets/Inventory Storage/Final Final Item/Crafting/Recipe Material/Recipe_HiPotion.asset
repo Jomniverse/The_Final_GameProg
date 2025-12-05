@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7937ac731efa4cb46a7dcbebb618cd86, type: 3}
+  m_Name: Recipe_HiPotion
+  m_EditorClassIdentifier: 
+  craft_item: {fileID: 11400000, guid: 763895e41df49bb49ad1ea31efe8bae6, type: 2}
+  required_material1: {fileID: 11400000, guid: d46369299be8f8a4198407c5aa1e51ed, type: 2}
+  required_quantity1: 1
+  required_material2: {fileID: 11400000, guid: 99c253a1ebe9e93428207325cf01f213, type: 2}
+  required_quantity2: 1
+  required_material3: {fileID: 11400000, guid: 5659b108b0048c64796fe6bc6e6df9da, type: 2}
+  required_quantity3: 1

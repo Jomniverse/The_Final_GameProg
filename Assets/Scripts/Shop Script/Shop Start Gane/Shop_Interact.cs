@@ -5,8 +5,9 @@ public class Shop_Interact : MonoBehaviour
 {
     private bool playerInside = false;
     public UI_Interact UII;
-    public Customer_SpawnPoint CSP;
     public bool shop_start = false;
+    public Shop_Start SS;
+    public Shop_End SE;
 
     private void Update()
     {
@@ -15,7 +16,7 @@ public class Shop_Interact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !shop_start)
+        if (collision.CompareTag("Player"))
         {
             playerInside = true;
             Debug.Log("Press E to start shop");
@@ -25,7 +26,7 @@ public class Shop_Interact : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !shop_start)
+        if (collision.CompareTag("Player"))
         {
             playerInside = false;
             UII.ExitInteract();
@@ -36,10 +37,20 @@ public class Shop_Interact : MonoBehaviour
     {
         if (playerInside && Input.GetKeyDown(KeyCode.E) && !shop_start)
         {
-            CSP.SpawnCustomers();
+           
             UII.ExitInteract();
-            shop_start = true;
+            SS.Open_Shop_StartPanel();
             Debug.Log("shop");
+            playerInside = false;
+        }
+
+        else if (playerInside && Input.GetKeyDown(KeyCode.E) && shop_start)
+        {
+
+            UII.ExitInteract();
+            SE.Open_Shop_EndPanel();
+            Debug.Log("shop");
+            playerInside = false;
         }
 
     }

@@ -12,8 +12,6 @@ public class Inventory_CategorySwitcher : MonoBehaviour
     public Button buttonWeapons;
     public Button buttonMaterials;
     public Button buttonRelic;
-    public Button buttonKeyItems;
-   
 
     void Awake()
     {
@@ -26,7 +24,6 @@ public class Inventory_CategorySwitcher : MonoBehaviour
         if (buttonWeapons) buttonWeapons.onClick.AddListener(() => ShowCategory(Item_Category.Weapons));
         if (buttonMaterials) buttonMaterials.onClick.AddListener(() => ShowCategory(Item_Category.Materials));
         if (buttonRelic) buttonRelic.onClick.AddListener(() => ShowCategory(Item_Category.Relic));
-        if (buttonKeyItems) buttonKeyItems.onClick.AddListener(() => ShowCategory(Item_Category.KeyItems));
 
         ShowAll();  
     }

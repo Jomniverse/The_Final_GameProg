@@ -8,6 +8,7 @@ public class NPC_Interact : MonoBehaviour
     public UI_Interact UII;
     public UI_Crafting UIC;
     public Button close_craft;
+    public Shop_Interact SI;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class NPC_Interact : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !SI.shop_start)
         {
             playerInside = true;
             Debug.Log("Press E to collect loot");
@@ -31,7 +32,7 @@ public class NPC_Interact : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !SI.shop_start)
         {
             playerInside = false;
             UII.ExitInteract();
@@ -40,7 +41,7 @@ public class NPC_Interact : MonoBehaviour
 
     void InteractInput()
     {
-        if (playerInside && Input.GetKeyDown(KeyCode.E))
+        if (playerInside && Input.GetKeyDown(KeyCode.E) && !SI.shop_start)
         {
             UIC.OpenCrafting();
         }

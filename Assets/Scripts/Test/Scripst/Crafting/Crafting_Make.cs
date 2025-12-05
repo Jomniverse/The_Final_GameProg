@@ -42,6 +42,8 @@ public class Crafting_Make : MonoBehaviour
             recipe_item.required_material2.item_quantity -= recipe_item.required_quantity2;
             recipe_item.required_material3.item_quantity -= recipe_item.required_quantity3;
 
+            recipe_item.craft_item.item_isDiscovered = true;
+
             TRL.RefreshUI();
 
             Debug.Log("Craft Item");

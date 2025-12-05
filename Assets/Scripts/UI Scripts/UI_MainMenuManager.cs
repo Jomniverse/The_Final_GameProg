@@ -27,7 +27,7 @@ public class UI_MainMenuManager : MonoBehaviour
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(leveltoLoad);
         loadOperation.allowSceneActivation = false;
 
-         float duration = 15f;
+         float duration = 7.5f;
          float timer = 0f;
 
         while (timer < duration)

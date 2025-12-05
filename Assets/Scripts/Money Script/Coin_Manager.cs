@@ -8,7 +8,8 @@ public class Coin_Manager : MonoBehaviour
     public int coin_goal;
     public TMP_Text coin_text_owned;
     public TMP_Text coin_text_goal;
-
+    public Image coin_image;
+   
 
     void Update()
     {
@@ -17,7 +18,7 @@ public class Coin_Manager : MonoBehaviour
 
     public void SetMoney()
     {
-        coin_text_owned.text = "Doubloons: " + coin_count.ToString();
+        coin_text_owned.text = ": " + coin_count.ToString();
         coin_text_goal.text = "Goal: " + coin_goal.ToString();
     }
 }

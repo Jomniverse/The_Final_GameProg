@@ -9,7 +9,6 @@ public class UI_Tab : MonoBehaviour
     public GameObject panel_inventory;
 
     [Header("Buttons")]
-    public Button button_settings;
     public Button button_inventory;
     public Button button_exit;
 
@@ -31,20 +30,12 @@ public class UI_Tab : MonoBehaviour
     private void ButtonInput()
     {
         button_exit.onClick.AddListener(ExitTab);
-        button_settings.onClick.AddListener(OpenSettings);
         button_inventory.onClick.AddListener(OpenInventory);
     }
 
     private void ExitTab()
     { 
         PT.CloseTab();
-    }
-
-    public void OpenSettings()
-    {
-        panel_setting.SetActive(true);
-        panel_inventory.SetActive(false);
-   
     }
 
     public void OpenInventory()
