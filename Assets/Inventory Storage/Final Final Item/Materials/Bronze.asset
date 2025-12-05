@@ -18,4 +18,4 @@ MonoBehaviour:
   item_icon: {fileID: 633378751198913410, guid: ef627509f6cd9b749a12e161638563a5, type: 3}
   item_isDiscovered: 0
   item_category: 1
-  item_price: 50
+  item_price: 15
